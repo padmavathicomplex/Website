@@ -92,14 +92,14 @@ function TempleGuide() {
                             <div className="transport-icon">🚆</div>
                             <h3 className="heading-4 mb-sm">By Train</h3>
                             <p>
-                                Nearest stations are <strong>Kumbakonam (30 km)</strong> and <strong>Mayiladuthurai (35 km)</strong>. Both are well-connected to major cities like Chennai and Trichy.
+                                <strong style={{ color: 'var(--color-maroon-primary)' }}>Nannilam Railway Station (10 mins)</strong> is the nearest station to Thirupugalur. Other nearby stations include <strong>Kumbakonam (30 km)</strong> and <strong>Mayiladuthurai (35 km)</strong>, both well-connected to major cities like Chennai and Trichy.
                             </p>
                         </div>
                         <div className="card p-lg text-center">
                             <div className="transport-icon">🚌</div>
                             <h3 className="heading-4 mb-sm">By Bus</h3>
                             <p>
-                                Regular buses are available from Kumbakonam, Mayiladuthurai, and Thanjavur to Thirupugalur. The bus stand is in the village center.
+                                Regular buses are available from <strong>Kumbakonam, Mayiladuthurai, Thanjavur, Karaikal, Nagapattinam, and Thiruvarur</strong> to Thirupugalur. The bus stand is in the village center.
                             </p>
                         </div>
                         <div className="card p-lg text-center">
@@ -115,6 +115,37 @@ function TempleGuide() {
 
             <section className="section bg-white">
                 <div className="container">
+                    <h2 className="heading-2 mb-lg">Nearby Temples in Thirupugalur</h2>
+                    <p className="mb-md">Thirupugalur is home to multiple sacred temples:</p>
+
+                    <div className="card p-lg bg-beige-light mb-xl">
+                        <div className="grid grid-2 gap-lg" style={{ alignItems: 'center' }}>
+                            <div>
+                                <h3 className="heading-3 mb-sm" style={{ color: 'var(--color-maroon-primary)' }}>
+                                    🛕 Sri Sowmya Narayana Perumal Temple
+                                </h3>
+                                <p className="text-large mb-sm" style={{ fontWeight: '600' }}>
+                                    (Thirupugalur Perumal Temple)
+                                </p>
+                                <p className="mb-sm">
+                                    A sacred Vishnu temple located in the same village, dedicated to Lord Vishnu in the form of Sowmya Narayana Perumal. This ancient temple is an important pilgrimage site for Vaishnavites.
+                                </p>
+                                <p style={{ color: 'var(--color-maroon-primary)', fontWeight: '600' }}>
+                                    📍 Distance: Within Thirupugalur village (walking distance)
+                                </p>
+                            </div>
+                            <div className="perumal-highlights">
+                                <h4 className="heading-4 mb-sm">Temple Highlights:</h4>
+                                <ul style={{ paddingLeft: '1.25rem', lineHeight: '1.8' }}>
+                                    <li>Ancient Divya Desam temple</li>
+                                    <li>Beautiful deity of Sowmya Narayana Perumal</li>
+                                    <li>Peaceful temple atmosphere</li>
+                                    <li>Convenient for devotees staying at Padmavathi Complex</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <h2 className="heading-2 mb-lg">Nearby Navagraha Temples</h2>
                     <p className="mb-xl">Thirupugalur is strategically located for devotees visiting the Navagraha circuit:</p>
 

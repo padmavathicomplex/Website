@@ -65,7 +65,7 @@ function Footer() {
                 <Phone size={18} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   <a href={`tel:${import.meta.env.VITE_PROPERTY_PHONE}`} className="footer-link">
-                    {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') || '+91 63828 12143'}
+                    {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\+\d{2})(\d{5})(\d{5})/, '$1 $2 $3') || '+91 63828 12143'}
                   </a>
                   <a href="tel:+919047842375" className="footer-link">+91 90478 42375</a>
                 </div>

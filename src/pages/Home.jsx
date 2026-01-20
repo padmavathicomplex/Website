@@ -73,7 +73,7 @@ function Home() {
                             <p className="card-text">
                                 Cool and comfortable rooms to relax after darshan. Attached bathroom with hot water.
                             </p>
-                            <p className="overview-price">From ₹800/day</p>
+                            <p className="overview-price">From ₹1800/day</p>
                             <Link to="/properties?type=AC Room" className="btn btn-outline btn-small">
                                 View Details
                             </Link>
@@ -85,7 +85,7 @@ function Home() {
                             <p className="card-text">
                                 Budget-friendly, clean, and well-ventilated rooms with all basic amenities.
                             </p>
-                            <p className="overview-price">From ₹500/day</p>
+                            <p className="overview-price">From ₹1500/day</p>
                             <Link to="/properties?type=Non-AC Room" className="btn btn-outline btn-small">
                                 View Details
                             </Link>

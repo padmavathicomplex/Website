@@ -381,7 +381,7 @@ function BookingForm() {
                                         <Phone size={18} />
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                             <a href={`tel:${import.meta.env.VITE_PROPERTY_PHONE}`}>
-                                                {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') || '+91 63828 12143'}
+                                                {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\+\d{2})(\d{5})(\d{5})/, '$1 $2 $3') || '+91 63828 12143'}
                                             </a>
                                         </div>
                                     </div>

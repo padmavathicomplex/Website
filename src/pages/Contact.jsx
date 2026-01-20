@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { validateContactForm } from '../utils/validation'
 import { sendContactEmail } from '../utils/emailService'
+import LocationMap from '../components/LocationMap'
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -83,7 +84,7 @@ function Contact() {
                                     <div>
                                         <h4 className="heading-4">Phone</h4>
                                         <a href={`tel:${import.meta.env.VITE_PROPERTY_PHONE}`} style={{ display: 'block', marginBottom: '0.25rem' }}>
-                                            {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') || '+91 63828 12143'}
+                                            {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\+\d{2})(\d{5})(\d{5})/, '$1 $2 $3') || '+91 63828 12143'}
                                         </a>
                                         <a href="tel:+919047842375" style={{ display: 'block', marginBottom: '0.25rem' }}>+91 90478 42375</a>
                                         <p className="contact-note">Available 24/7</p>
@@ -249,22 +250,14 @@ function Contact() {
                 </div>
             </section>
 
-            {/* Map Section */}
-            <section className="section-sm bg-beige-light">
+            {/* Location Map Section */}
+            <section className="section bg-beige-light">
                 <div className="container">
                     <h2 className="heading-2 text-center mb-lg">Find Us</h2>
-                    <div className="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919377!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                            width="100%"
-                            height="450"
-                            style={{ border: 0, borderRadius: 'var(--radius-lg)' }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Our Location"
-                        ></iframe>
-                    </div>
+                    <p className="text-center mb-xl" style={{ color: 'var(--color-gray-dark)' }}>
+                        Located in the heart of Thirupugalur, just 2-3 minutes walk from Agnipureeswarar Temple
+                    </p>
+                    <LocationMap />
                 </div>
             </section>
 
