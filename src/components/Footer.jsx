@@ -86,9 +86,11 @@ function Footer() {
 
         {/* Social Media & Copyright */}
         <div className="footer-bottom">
-
           <p className="footer-copyright">
             © {currentYear} Padmavathi Complex. All rights reserved.
+          </p>
+          <p className="developer-credit">
+            Developed by <span className="developer-name">Navya Sree Yellina</span>
           </p>
         </div>
       </div>
@@ -221,6 +223,26 @@ function Footer() {
         .footer-copyright {
           color: rgba(255, 255, 255, 0.7);
           font-size: 0.9rem;
+        }
+
+        .developer-credit {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 0.85rem;
+          font-style: italic;
+          margin-top: var(--spacing-xs);
+        }
+
+        .developer-name {
+          color: var(--color-beige-light);
+          font-weight: var(--font-weight-semibold);
+          font-style: normal;
+          transition: all var(--transition-base);
+          cursor: default;
+        }
+
+        .developer-name:hover {
+          color: var(--color-white);
+          text-shadow: 0 0 10px rgba(245, 222, 179, 0.5);
         }
 
         @media (min-width: 768px) {
