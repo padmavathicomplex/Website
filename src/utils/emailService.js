@@ -4,7 +4,14 @@ import emailjs from '@emailjs/browser'
 const initEmailJS = () => {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     if (publicKey) {
-        emailjs.init(publicKey)
+        try {
+            emailjs.init(publicKey)
+            console.log('EmailJS Initialized successfully with key length:', publicKey.length)
+        } catch (error) {
+            console.error('EmailJS Init Failed:', error)
+        }
+    } else {
+        console.error('EmailJS Public Key missing in config!')
     }
 }
 
@@ -43,10 +50,12 @@ export const sendBookingEmail = async (bookingData) => {
     }
 
     try {
+        console.log('Sending booking email with params:', templateParams)
         const response = await emailjs.send(serviceId, templateId, templateParams)
+        console.log('Booking email sent successfully:', response)
         return response
     } catch (error) {
-        console.error('Failed to send booking email:', error)
+        console.error('Failed to send booking email. Details:', error)
         throw error
     }
 }

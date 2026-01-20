@@ -63,17 +63,22 @@ function Footer() {
             <ul className="footer-contact">
               <li>
                 <Phone size={18} />
-                <a href="tel:+1234567890" className="footer-link">+1 (234) 567-890</a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <a href={`tel:${import.meta.env.VITE_PROPERTY_PHONE}`} className="footer-link">
+                    {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') || '+91 63828 12143'}
+                  </a>
+                  <a href="tel:+919047842375" className="footer-link">+91 90478 42375</a>
+                </div>
               </li>
               <li>
                 <Mail size={18} />
-                <a href="mailto:info@padmavathicomplex.com" className="footer-link">
-                  info@padmavathicomplex.com
+                <a href={`mailto:${import.meta.env.VITE_PROPERTY_EMAIL}`} className="footer-link">
+                  {import.meta.env.VITE_PROPERTY_EMAIL}
                 </a>
               </li>
               <li>
                 <MapPin size={18} />
-                <span>Near Agnipureeswarar Temple, Thirupugalur, Nagapattinam - 609704</span>
+                <span>{import.meta.env.VITE_PROPERTY_ADDRESS}</span>
               </li>
             </ul>
           </div>

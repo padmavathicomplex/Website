@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react'
 
 function WhatsAppButton() {
   // Use environment variable or default number
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '1234567890'
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '916382812143'
   const message = encodeURIComponent("Hello, I'm interested in booking at Padmavathi Complex")
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 

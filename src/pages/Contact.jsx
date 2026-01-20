@@ -82,7 +82,10 @@ function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="heading-4">Phone</h4>
-                                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                        <a href={`tel:${import.meta.env.VITE_PROPERTY_PHONE}`} style={{ display: 'block', marginBottom: '0.25rem' }}>
+                                            {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') || '+91 63828 12143'}
+                                        </a>
+                                        <a href="tel:+919047842375" style={{ display: 'block', marginBottom: '0.25rem' }}>+91 90478 42375</a>
                                         <p className="contact-note">Available 24/7</p>
                                     </div>
                                 </div>
@@ -93,7 +96,7 @@ function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="heading-4">Email</h4>
-                                        <a href="mailto:info@padmavathicomplex.com">info@padmavathicomplex.com</a>
+                                        <a href={`mailto:${import.meta.env.VITE_PROPERTY_EMAIL}`}>{import.meta.env.VITE_PROPERTY_EMAIL}</a>
                                         <p className="contact-note">We reply within 24 hours</p>
                                     </div>
                                 </div>
@@ -104,7 +107,7 @@ function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="heading-4">Address</h4>
-                                        <p>Padmavathi Complex<br />Near Agnipureeswarar Temple<br />Thirupugalur, Nagapattinam - 609704</p>
+                                        <p style={{ whiteSpace: 'pre-line' }}>{import.meta.env.VITE_PROPERTY_ADDRESS?.replace(/, /g, ',\n')}</p>
                                         <p className="contact-note">Walkable distance from Temple</p>
                                     </div>
                                 </div>

@@ -28,6 +28,7 @@ function BookingForm() {
     const [errors, setErrors] = useState({})
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error'
+    const [errorMessage, setErrorMessage] = useState('')
     const [duration, setDuration] = useState(0)
 
     useEffect(() => {
@@ -102,6 +103,7 @@ function BookingForm() {
         } catch (error) {
             console.error('Booking submission error:', error)
             setSubmitStatus('error')
+            setErrorMessage(error.text || error.message || 'Unknown error occurred')
         } finally {
             setIsSubmitting(false)
         }
@@ -141,7 +143,8 @@ function BookingForm() {
                                     <AlertCircle size={24} />
                                     <div>
                                         <strong>Submission Failed</strong>
-                                        <p>We couldn't process your booking request. Please check your email configuration or contact us directly at the phone number below.</p>
+                                        <p>Error: {errorMessage}</p>
+                                        <p>Please check your email configuration or contact us directly at the phone number below.</p>
                                     </div>
                                 </div>
                             )}
@@ -376,11 +379,15 @@ function BookingForm() {
                                 <div className="contact-info">
                                     <div className="contact-item">
                                         <Phone size={18} />
-                                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                            <a href={`tel:${import.meta.env.VITE_PROPERTY_PHONE}`}>
+                                                {import.meta.env.VITE_PROPERTY_PHONE?.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') || '+91 63828 12143'}
+                                            </a>
+                                        </div>
                                     </div>
                                     <div className="contact-item">
                                         <Mail size={18} />
-                                        <a href="mailto:info@premiumrentals.com">info@premiumrentals.com</a>
+                                        <a href={`mailto:${import.meta.env.VITE_PROPERTY_EMAIL}`}>{import.meta.env.VITE_PROPERTY_EMAIL}</a>
                                     </div>
                                 </div>
 
