@@ -1,3 +1,6 @@
+import acRoomImg from '../assets/ac_room.png'
+import nonAcRoomImg from '../assets/non_ac_room.png'
+import independentHouseImg from '../assets/independent_house.png'
 
 export const properties = [
     {
@@ -6,16 +9,14 @@ export const properties = [
         heading: 'Air Conditioned Room - Padmavathi Complex',
         type: 'Room',
         category: 'AC Room',
-        price: 1200,
+        price: 800,
         priceRange: '₹800-1200',
         pricePer: 'day',
         location: 'Ground Floor',
         featured: true,
-        image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&auto=format&fit=crop', // Simpler Indian hotel room
+        image: acRoomImg,
         images: [
-            'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop', // Bathroom/Details
+            acRoomImg
         ],
         description: 'Comfortable air-conditioned room perfect for devotees seeking cool comfort after temple visits. Ideal for couples or small families. Maintained with utmost cleanliness and devotee-friendly amenities.',
         amenities: [
@@ -49,16 +50,14 @@ export const properties = [
         heading: 'Non-AC Room - Padmavathi Complex',
         type: 'Room',
         category: 'Non-AC Room',
-        price: 700,
+        price: 500,
         priceRange: '₹500-700',
         pricePer: 'day',
         location: 'Ground Floor',
         featured: true,
-        image: 'https://images.unsplash.com/photo-1616594039964-ea806114eb1b?w=800&auto=format&fit=crop', // Simple clean room
+        image: nonAcRoomImg,
         images: [
-            'https://images.unsplash.com/photo-1616594039964-ea806114eb1b?w=800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&auto=format&fit=crop',
+            nonAcRoomImg
         ],
         description: 'Simple, clean, and comfortable room with good ventilation. Perfect for devotees on a budget or those who prefer natural air. Well-maintained with all essential amenities.',
         amenities: [
@@ -91,17 +90,14 @@ export const properties = [
         heading: 'Independent House - Padmavathi Complex',
         type: 'House',
         category: 'House',
-        price: 3000,
+        price: 2000,
         priceRange: '₹2000-3000',
         pricePer: 'day',
         location: 'Private Entrance',
         featured: true,
-        image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&auto=format&fit=crop', // Indian style house exterior/interior
+        image: independentHouseImg,
         images: [
-            'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&auto=format&fit=crop', // Hall
-            'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&auto=format&fit=crop', // Bedroom
-            'https://images.unsplash.com/photo-1556912173-3db9963f6388?w=800&auto=format&fit=crop', // Kitchen
+            independentHouseImg
         ],
         description: 'Spacious independent house ideal for families or groups visiting the temple together. Complete privacy with all modern amenities. Perfect for extended stays during festivals or special occasions.',
         amenities: [

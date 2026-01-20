@@ -24,7 +24,6 @@ function Navbar() {
     { path: '/properties', label: 'Accommodation', icon: Building2 },
     { path: '/about', label: 'About', icon: Info },
     { path: '/temple', label: 'Temple Info', icon: Sparkles },
-    { path: '/gallery', label: 'Gallery', icon: ImageIcon },
     { path: '/contact', label: 'Contact', icon: Phone },
   ]
 

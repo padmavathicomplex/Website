@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import { Star, ArrowRight, CheckCircle, Clock, Shield, Sparkles } from 'lucide-react'
 import PropertyCard from '../components/PropertyCard'
 import { getFeaturedProperties } from '../data/properties'
-import { testimonials, getAverageRating } from '../data/testimonials'
+import { testimonials } from '../data/testimonials'
+import templeHero from '../assets/temple_hero.png'
+import templeView from '../assets/temple_view.png'
 
 function Home() {
     const featuredProperties = getFeaturedProperties()
-    const averageRating = getAverageRating()
+
 
     const benefits = [
         {
@@ -36,13 +38,12 @@ function Home() {
             {/* Hero Section */}
             <section className="hero">
                 <div className="bg-image" style={{
-                    backgroundImage: 'url(https://images.unsplash.com/photo-1582510003544-4d00b72dc224?w=1920&auto=format&fit=crop)' // Dravidian Temple Gopuram
+                    backgroundImage: `url(${templeHero})`
                 }}></div>
                 <div className="overlay"></div>
                 <div className="hero-content container">
                     <span className="badge badge-24-7 mb-md">Near Agnipureeswarar Temple</span>
-                    <h1 className="hero-title">Padmavathi Complex</h1>
-                    <p className="hero-subtitle">
+                    <p className="hero-subtitle" style={{ color: 'white', fontWeight: 'bold' }}>
                         Peaceful, clean, and comfortable accommodation for devotees in Thirupugalur
                     </p>
                     <div className="hero-buttons">
@@ -124,7 +125,7 @@ function Home() {
                         </div>
                         <div className="about-image">
                             <img
-                                src="https://images.unsplash.com/photo-1623838493188-756d10c8003a?w=600&auto=format&fit=crop" // Indian Temple Tank / Peaceful view
+                                src={templeView}
                                 alt="Temple View"
                                 style={{ borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xl)' }}
                             />
@@ -185,22 +186,14 @@ function Home() {
                 <div className="container">
                     <div className="text-center mb-xl">
                         <h2 className="heading-2">What Our Customers Say</h2>
-                        <div className="rating-display">
-                            <Star size={24} fill="var(--color-maroon-primary)" color="var(--color-maroon-primary)" />
-                            <span className="rating-value">{averageRating}</span>
-                            <span className="rating-text">Average Rating from {testimonials.length} Reviews</span>
-                        </div>
+
                     </div>
 
                     <div className="grid grid-2 gap-lg">
                         {testimonials.map(testimonial => (
                             <div key={testimonial.id} className="testimonial-card">
                                 <div className="testimonial-header">
-                                    <img
-                                        src={testimonial.image}
-                                        alt={testimonial.name}
-                                        className="testimonial-avatar"
-                                    />
+
                                     <div>
                                         <h4 className="testimonial-name">{testimonial.name}</h4>
                                         <p className="testimonial-role">{testimonial.role}</p>

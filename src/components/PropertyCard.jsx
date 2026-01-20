@@ -1,78 +1,78 @@
 import { Link } from 'react-router-dom'
-import { Wifi, Car, Utensils, Bath, Bed, Users, MapPin, DollarSign } from 'lucide-react'
+import { Wifi, Car, Utensils, Bath, Bed, Users, MapPin, IndianRupee } from 'lucide-react'
 
 function PropertyCard({ property }) {
-    const iconMap = {
-        wifi: Wifi,
-        parking: Car,
-        kitchen: Utensils,
-        bathroom: Bath,
-        bed: Bed,
-        guests: Users,
-    }
+  const iconMap = {
+    wifi: Wifi,
+    parking: Car,
+    kitchen: Utensils,
+    bathroom: Bath,
+    bed: Bed,
+    guests: Users,
+  }
 
-    return (
-        <div className="card">
-            <div className="property-card-image-container">
-                <img
-                    src={property.image}
-                    alt={property.name}
-                    className="card-img"
-                    loading="lazy"
-                />
-                <div className="property-card-badges">
-                    <span className={`badge ${property.type === 'House' ? 'badge-primary' : 'badge-secondary'}`}>
-                        {property.category}
-                    </span>
-                    {property.featured && (
-                        <span className="badge badge-success">Featured</span>
-                    )}
-                </div>
-            </div>
+  return (
+    <div className="card">
+      <div className="property-card-image-container">
+        <img
+          src={property.image}
+          alt={property.name}
+          className="card-img"
+          loading="lazy"
+        />
+        <div className="property-card-badges">
+          <span className={`badge ${property.type === 'House' ? 'badge-primary' : 'badge-secondary'}`}>
+            {property.category}
+          </span>
+          {property.featured && (
+            <span className="badge badge-success">Featured</span>
+          )}
+        </div>
+      </div>
 
-            <div className="card-body">
-                <h3 className="card-title">{property.name}</h3>
+      <div className="card-body">
+        <h3 className="card-title">{property.name}</h3>
 
-                <div className="property-card-location">
-                    <MapPin size={16} />
-                    <span>{property.location || 'Prime Location'}</span>
-                </div>
+        <div className="property-card-location">
+          <MapPin size={16} />
+          <span>{property.location || 'Prime Location'}</span>
+        </div>
 
-                <p className="card-text property-card-description">
-                    {property.description.substring(0, 100)}...
-                </p>
+        <p className="card-text property-card-description">
+          {property.description.substring(0, 100)}...
+        </p>
 
-                <div className="property-card-amenities">
-                    {property.amenities.slice(0, 4).map((amenity, index) => {
-                        const Icon = iconMap[amenity.toLowerCase()] || Wifi
-                        return (
-                            <div key={index} className="property-card-amenity">
-                                <Icon size={16} />
-                                <span>{amenity}</span>
-                            </div>
-                        )
-                    })}
-                </div>
+        <div className="property-card-amenities">
+          {property.amenities.slice(0, 4).map((amenity, index) => {
+            const Icon = iconMap[amenity.toLowerCase()] || Wifi
+            return (
+              <div key={index} className="property-card-amenity">
+                <Icon size={16} />
+                <span>{amenity}</span>
+              </div>
+            )
+          })}
+        </div>
 
-                <div className="property-card-footer">
-                    <div className="property-card-price">
-                        <DollarSign size={18} />
-                        <span className="price-amount">${property.price}</span>
-                        <span className="price-period">/{property.pricePer}</span>
-                    </div>
+        <div className="property-card-footer">
+          <div className="property-card-price">
+            <IndianRupee size={18} />
+            <span className="price-amount">{property.price}</span>
+            <span className="price-period">/{property.pricePer}</span>
+          </div>
 
-                    <div className="property-card-buttons">
-                        <Link to={`/property/${property.id}`} className="btn btn-outline btn-small">
-                            View Details
-                        </Link>
-                        <Link to={`/booking?property=${property.id}`} className="btn btn-primary btn-small">
-                            Book Now
-                        </Link>
-                    </div>
-                </div>
-            </div>
+          <div className="property-card-buttons">
+            <Link to={`/property/${property.id}`} className="btn btn-outline btn-small">
+              View Details
+            </Link>
+            <Link to={`/booking?property=${property.id}`} className="btn btn-primary btn-small">
+              Book Now
+            </Link>
+          </div>
+        </div>
+      </div>
 
-            <style jsx>{`
+      <style jsx>{`
         .property-card-image-container {
           position: relative;
           overflow: hidden;
@@ -168,8 +168,8 @@ function PropertyCard({ property }) {
           min-width: fit-content;
         }
       `}</style>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default PropertyCard

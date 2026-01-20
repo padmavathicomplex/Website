@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Building2, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+import { Building2, Mail, Phone, MapPin } from 'lucide-react'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -15,15 +15,9 @@ function Footer() {
     { path: '/contact', label: 'Contact Us' },
     { path: '/faq', label: 'FAQ' },
     { path: '/booking', label: 'Book Now' },
-    { path: '/gallery', label: 'Gallery' },
   ]
 
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  ]
+
 
   return (
     <footer className="footer">
@@ -49,7 +43,6 @@ function Footer() {
             <ul className="footer-links">
               <li><Link to="/" className="footer-link">Home</Link></li>
               <li><Link to="/properties" className="footer-link">Accommodation</Link></li>
-              <li><Link to="/gallery" className="footer-link">Gallery</Link></li>
               <li><Link to="/temple" className="footer-link">Temple Information</Link></li>
               <li><Link to="/terms" className="footer-link">Terms & Conditions</Link></li>
               <li><Link to="/faq" className="footer-link">FAQ</Link></li>
@@ -88,23 +81,7 @@ function Footer() {
 
         {/* Social Media & Copyright */}
         <div className="footer-bottom">
-          <div className="footer-social">
-            {socialLinks.map((social) => {
-              const Icon = social.icon
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="footer-social-link"
-                  aria-label={social.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon size={20} />
-                </a>
-              )
-            })}
-          </div>
+
           <p className="footer-copyright">
             © {currentYear} Padmavathi Complex. All rights reserved.
           </p>

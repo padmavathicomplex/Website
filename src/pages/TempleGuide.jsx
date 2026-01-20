@@ -1,4 +1,5 @@
 import { Clock, MapPin, Calendar, Info } from 'lucide-react'
+import templeView from '../assets/temple_view.png'
 
 function TempleGuide() {
     return (
@@ -17,6 +18,16 @@ function TempleGuide() {
                     <div className="grid grid-2 gap-xl">
                         <div>
                             <h2 className="heading-2 mb-md">About the Temple</h2>
+                            <img
+                                src={templeView}
+                                alt="Agnipureeswarar Temple View"
+                                style={{
+                                    width: '100%',
+                                    borderRadius: 'var(--radius-lg)',
+                                    marginBottom: 'var(--spacing-md)',
+                                    boxShadow: 'var(--shadow-md)'
+                                }}
+                            />
                             <p className="text-large mb-md">
                                 <strong>Arulmigu Agnipureeswarar Temple</strong>, located in Thirupugalur, is a historic Hindu temple dedicated to Lord Shiva. It is one of the 276 Paadal Petra Sthalams and is one of the important Navagraha temples associated with <strong>Agni (Fire)</strong> and <strong>Chevvai (Mars)</strong> protection.
                             </p>
@@ -35,12 +46,20 @@ function TempleGuide() {
                                 </h3>
                                 <div className="timings-grid">
                                     <div className="time-block">
-                                        <strong>Morning:</strong>
-                                        <p>6:00 AM - 12:00 PM</p>
+                                        <strong>Morning Darshan:</strong>
+                                        <p>6:30 AM - 12:30 PM</p>
                                     </div>
                                     <div className="time-block">
-                                        <strong>Evening:</strong>
-                                        <p>4:00 PM - 8:30 PM</p>
+                                        <strong>Evening Darshan:</strong>
+                                        <p>4:00 PM - 9:00 PM</p>
+                                    </div>
+                                    <div className="time-block">
+                                        <strong>Pooja Timings:</strong>
+                                        <ul style={{ listStyle: 'none', padding: 0, marginTop: '0.5rem', fontSize: '0.9rem' }}>
+                                            <li>Kalasanthi: 8:00 AM</li>
+                                            <li>Uchikalam: 12:00 PM</li>
+                                            <li>Sayarakshai: 6:00 PM</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <p className="text-small mt-md text-gray-dark">

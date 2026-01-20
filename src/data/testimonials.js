@@ -1,40 +1,33 @@
 export const testimonials = [
     {
-        id: 1,
-        name: 'Sarah Johnson',
-        role: 'Business Traveler',
-        image: 'https://randomuser.me/api/portraits/women/44.jpg',
+        id: 0,
+        name: 'Navya Yellina',
+        role: 'Pilgrim Visitor',
+        image: 'https://randomuser.me/api/portraits/women/65.jpg',
         rating: 5,
-        text: 'Absolutely wonderful experience! The AC room was spotless, the staff was incredibly helpful, and the 24/7 service made my entire stay stress-free. Highly recommended for anyone looking for quality accommodation.',
-        date: '2 weeks ago'
+        text: 'Absolutely good experience! The AC room was good the staff was incredibly helpful, and the 24/7 service made my entire stay stress-free. Highly recommended for anyone looking for accommodation near by temple',
+        date: '2 days ago'
     },
+
     {
         id: 2,
-        name: 'Michael Chen',
+        name: 'Bharath',
         role: 'Family Vacation',
         image: 'https://randomuser.me/api/portraits/men/32.jpg',
         rating: 5,
-        text: 'We rented the family house for a month and it exceeded all our expectations. Spacious, clean, and in a great location. The booking process was smooth and the property manager was always available for any questions.',
+        text: 'We rented the family house for a 3 days and it meet all our expectations. Spacious, clean, and in a great location(very Near to Temple). The booking process was smooth and the property manager was always available for any questions.',
         date: '1 month ago'
     },
     {
         id: 3,
-        name: 'Emma Williams',
-        role: 'Long-term Resident',
-        image: 'https://randomuser.me/api/portraits/women/68.jpg',
+        name: 'Iyar',
+        role: 'Temple Visitor',
+        image: 'https://randomuser.me/api/portraits/men/68.jpg',
         rating: 5,
-        text: 'I\'ve been living in one of their townhouses for 6 months now, and I couldn\'t be happier. The amenities are excellent, maintenance is prompt, and the value for money is outstanding. Best rental decision I\'ve made!',
+        text: 'I visited this temple for one day and wasn\'t sure about the timings and poojas. The staff helped me with everything, guided me with all the details of the temple, and were very friendly.',
         date: '3 weeks ago'
     },
-    {
-        id: 4,
-        name: 'David Rodriguez',
-        role: 'Student',
-        image: 'https://randomuser.me/api/portraits/men/52.jpg',
-        rating: 4,
-        text: 'Great budget-friendly option! The non-AC room was perfect for my needs - clean, comfortable, and affordable. The WiFi was reliable which was crucial for my online classes. Would definitely stay again.',
-        date: '1 week ago'
-    }
+
 ]
 
 export const getAverageRating = () => {

@@ -8,7 +8,6 @@ import PropertyDetail from './pages/PropertyDetail'
 import BookingForm from './pages/BookingForm'
 import About from './pages/About'
 import Amenities from './pages/Amenities'
-import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
 import TempleGuide from './pages/TempleGuide'
@@ -26,7 +25,6 @@ function App() {
                     <Route path="/booking" element={<BookingForm />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/amenities" element={<Amenities />} />
-                    <Route path="/gallery" element={<Gallery />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/temple" element={<TempleGuide />} />
