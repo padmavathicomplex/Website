@@ -58,53 +58,6 @@ function Home() {
                 </div>
             </section>
 
-            {/* Quick Overview */}
-            <section className="section bg-white">
-                <div className="container">
-                    <div className="text-center mb-xl">
-                        <h2 className="heading-2">Accommodation Types</h2>
-                        <p className="text-large text-gray-dark">Choose the perfect room for your pilgrimage</p>
-                    </div>
-
-                    <div className="grid grid-3 gap-lg">
-                        <div className="overview-card">
-                            <div className="overview-icon">❄️</div>
-                            <h3 className="heading-4">AC Rooms</h3>
-                            <p className="card-text">
-                                Cool and comfortable rooms to relax after darshan. Attached bathroom with hot water.
-                            </p>
-                            <p className="overview-price">From ₹1300/day</p>
-                            <Link to="/properties?type=AC Room" className="btn btn-outline btn-small">
-                                View Details
-                            </Link>
-                        </div>
-
-                        <div className="overview-card">
-                            <div className="overview-icon">🛏️</div>
-                            <h3 className="heading-4">Non-AC Rooms</h3>
-                            <p className="card-text">
-                                Budget-friendly, clean, and well-ventilated rooms with all basic amenities.
-                            </p>
-                            <p className="overview-price">From ₹1000/day</p>
-                            <Link to="/properties?type=Non-AC Room" className="btn btn-outline btn-small">
-                                View Details
-                            </Link>
-                        </div>
-
-                        <div className="overview-card">
-                            <div className="overview-icon">🏠</div>
-                            <h3 className="heading-4">Independent House</h3>
-                            <p className="card-text">
-                                Spacious house for families and groups (6-8 pax). Privacy and home-like comfort.
-                            </p>
-                            <p className="overview-price">From ₹1500/day</p>
-                            <Link to="/properties?type=House" className="btn btn-outline btn-small">
-                                View Details
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* About Section */}
             <section className="section bg-beige-medium">
@@ -259,33 +212,7 @@ function Home() {
             </section>
 
             <style>{`
-        .overview-card {
-          background: white;
-          padding: var(--spacing-xl);
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          text-align: center;
-          transition: all var(--transition-base);
-        }
-
-        .overview-card:hover {
-          transform: translateY(-8px);
-          box-shadow: var(--shadow-xl);
-        }
-
-        .overview-icon {
-          font-size: 4rem;
-          margin-bottom: var(--spacing-md);
-        }
-
-        .overview-price {
-          font-size: 1.5rem;
-          font-weight: var(--font-weight-bold);
-          color: var(--color-maroon-primary);
-          margin: var(--spacing-md) 0;
-        }
-
-        .about-grid {
+.about-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: var(--spacing-2xl);
