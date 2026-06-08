@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Maroon background -->
+  <rect width="32" height="32" rx="6" fill="#800000"/>
+  <!-- Temple spire / gopuram shape -->
+  <polygon points="16,3 19,9 22,9 19,14 20,14 16,19 12,14 13,14 10,9 13,9" fill="#F5DEB3"/>
+  <!-- Building body -->
+  <rect x="10" y="19" width="12" height="10" rx="1" fill="#F5DEB3"/>
+  <!-- Door -->
+  <rect x="14" y="22" width="4" height="7" rx="1" fill="#800000"/>
+</svg>
